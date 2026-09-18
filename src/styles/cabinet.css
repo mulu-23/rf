@@ -1,0 +1,66 @@
+/* ============================================================
+   cabinet.css — стили личного кабинета
+   ============================================================ */
+
+.cabinet__profile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cabinet__avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.cabinet__info { flex: 1; min-width: 200px; }
+.cabinet__name { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.cabinet__meta { color: var(--text-muted); font-size: 14px; }
+
+.app-list { display: flex; flex-direction: column; gap: 16px; }
+
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: var(--transition);
+}
+.app-card:hover { border-color: var(--primary); }
+
+.app-card__main { flex: 1; min-width: 220px; }
+.app-card__room { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.app-card__details { color: var(--text-muted); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+
+.app-card__side { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+
+.review-done {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .cabinet__profile { flex-direction: column; text-align: center; }
+  .app-card { flex-direction: column; align-items: stretch; }
+  .app-card__side { align-items: stretch; }
+}

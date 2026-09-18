@@ -1,0 +1,74 @@
+/* ============================================================
+   admin.css — стили админ-панели
+   ============================================================ */
+
+.admin__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+.stat__num { font-size: 28px; font-weight: 800; color: var(--primary); }
+.stat__label { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+
+.admin__filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.admin-list { display: flex; flex-direction: column; gap: 16px; }
+
+.admin-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  transition: var(--transition);
+}
+.admin-card:hover { border-color: var(--primary); }
+
+.admin-card__title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.admin-card__row { color: var(--text-muted); font-size: 14px; margin-bottom: 4px; }
+.admin-card__row b { color: var(--text); font-weight: 600; }
+
+.admin-card__side { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+
+.admin-card__select {
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.admin-card__select:focus { outline: none; border-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .admin-card { grid-template-columns: 1fr; }
+  .admin-card__side { align-items: stretch; }
+}
